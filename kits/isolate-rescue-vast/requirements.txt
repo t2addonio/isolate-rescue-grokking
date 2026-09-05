@@ -1,0 +1,7 @@
+torch>=2.2
+numpy>=1.24
+tqdm>=4.66
+# gpt2 backend only (grok backend does not need these):
+transformers>=4.40
+# transformer-lens is optional; worker falls back to HF GPT-2 if missing
+# transformer-lens>=2.0
