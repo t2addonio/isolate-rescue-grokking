@@ -1,3 +1,7 @@
+> **Pipeline stage 2 of 4 — Isolation + additive / distributed representations**  
+> Grokking → causal residual isolation → **distributed/additive representations** → cross-domain residual addressing → real-world signal experiments.  
+> Previous: [`residual-stream-grokking`](https://github.com/t2addonio/residual-stream-grokking) · Next: [`residual-causal-toolkit`](https://github.com/t2addonio/residual-causal-toolkit) · Map: [github.com/t2addonio](https://github.com/t2addonio)
+
 # Isolate + Rescue Grokking
 
 Indexed science pack for residual-stream **isolate / rescue / freeze-at-transition** experiments on modular-addition grokking (P=113, 1-layer Transformer, d=128).
@@ -5,6 +9,8 @@ Indexed science pack for residual-stream **isolate / rescue / freeze-at-transiti
 Public repo: https://github.com/t2addonio/isolate-rescue-grokking
 
 Companion paper repo: https://github.com/t2addonio/residual-stream-grokking
+
+This repo is where the single-component claim becomes geometry: no one PCA direction is sufficient, fail sets are nearly disjoint, logit deltas add, and the transition subspace dies after the jump. That is the distributed / additive representation stage.
 
 ## Headline findings (16-seed, 2026-08-16)
 
