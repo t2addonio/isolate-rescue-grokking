@@ -1,12 +1,14 @@
 # Isolate + Rescue Grokking — repository index
 
+> **Errata (2026-10-14):** the training script (`worker.py`) and all result JSONs listed here are **not in this repository**, so none of the 16-seed numbers can be checked from the repo, and it can't be confirmed that the 16 runs were seeded. See [`ERRATA.md`](ERRATA.md).
+
 Public repo: https://github.com/t2addonio/isolate-rescue-grokking
-Working store: `/home/workdir/artifacts` (1057 files, sha256 in `MANIFEST.tsv`)
+Working store: `/home/workdir/artifacts` (1057 files, sha256 in `MANIFEST.tsv`, which is also not committed)
 Paper lineage: https://github.com/t2addonio/residual-stream-grokking
 
 Indexed 2026-09-05.
 
-## Claims locked by these runs
+## Claims from these runs (unverified from this repo — see ERRATA.md)
 
 1. Single PCA dir is never the solution (`keep_only ~ 1.7–1.8%` all seeds).
 2. The 8-D residual PCA span often carries most of the solution (`keep_all ≥ 0.95` on 14/16 in streams_run16).
@@ -20,14 +22,14 @@ Indexed 2026-09-05.
 
 | Path | Role |
 |------|------|
-| `kits/isolate-rescue-vast/worker.py` | Train modular add, extract 8 PCA + between-class dirs, isolate/rescue, contribution, combinatorial, phase timing, freeze-at-transition |
+| `kits/isolate-rescue-vast/worker.py` (**not in repo**; working store only) | Train modular add, extract 8 PCA + between-class dirs, isolate/rescue, contribution, combinatorial, phase timing, freeze-at-transition |
 | `kits/isolate-rescue-vast/launch.sh` | Wave launch across GPUs (`N_SEEDS=16` default) |
-| `kits/joint-residual/worker.py` | Same + contrastive subspace C, geometry vs P, cancel-C / cancel-P / cancel-both |
+| `kits/joint-residual/worker.py` (**not in repo**; working store only) | Same + contrastive subspace C, geometry vs P, cancel-C / cancel-P / cancel-both |
 | `kits/gpt2_extract/isolate_and_rescue.py` | GPT-2 extract / isolate probe |
 
 Flags worth knowing: `--save_every`, `--wd`, `--no_freeze`, `--trans_threshold`, `--n_contrastive`, `--no_joint`, `--no_combo`, `--no_phase`.
 
-## Result packs in this repo
+## Result packs (planned; **none of these files are in this repo yet**)
 
 | Path | What it is |
 |------|------------|

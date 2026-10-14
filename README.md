@@ -4,6 +4,8 @@
 
 # Isolate + Rescue Grokking
 
+> **Errata (2026-10-14):** the training script (`worker.py`) and all result JSONs listed here are **not in this repository**, so none of the 16-seed numbers can be checked from the repo, and it can't be confirmed that the 16 runs were seeded. See [`ERRATA.md`](ERRATA.md).
+
 Indexed science pack for residual-stream **isolate / rescue / freeze-at-transition** experiments on modular-addition grokking (P=113, 1-layer Transformer, d=128).
 
 Public repo: https://github.com/t2addonio/isolate-rescue-grokking
@@ -12,9 +14,11 @@ Companion paper repo: https://github.com/t2addonio/residual-stream-grokking
 
 This repo is where the single-component claim becomes geometry: no one PCA direction is sufficient, fail sets are nearly disjoint, logit deltas add, and the transition subspace dies after the jump. That is the distributed / additive representation stage.
 
-## Headline findings (16-seed, 2026-08-16)
+## Headline findings (16-seed, 2026-08-16) — unverified
 
-- All 16 seeds grokked (`base ≈ 1.0`).
+> These numbers come from runs whose training code (`worker.py`) and result files are not in this repo. They can't be reproduced or checked from here yet, and seeding of those runs is unconfirmed. Treat them as reported, not verified.
+
+- All 16 seeds grokked (`base ≈ 1.0`). (`base` is full-model accuracy; the `keep_all` column in HEADLINES.md is a different metric and goes down to 0.8785.)
 - No single PCA direction is sufficient: `keep_only ≈ 1.8%` on every seed.
 - Failure sets across dirs are nearly disjoint (mean Jaccard ≈ 0).
 - Logit remove-deltas are nearly additive (ratio ≈ 1.03, corr ≈ 0.998).
@@ -32,14 +36,14 @@ kits/
   isolate-rescue-vast/   train + isolate + rescue + combo + phase + freeze
   joint-residual/        contrastive C + residual PCA P on the same snapshots
   gpt2_extract/          GPT-2 isolate-and-rescue probe
-results/
+results/                 (only HEADLINES.md is committed; folders below are not in git yet)
   streams_run/           8-seed isolation+rescue
   streams_run16/         16-seed + posthoc + between-class + combinatorial
   phase_run16/           16-seed phase timing (save_every=250)
   phase_freeze_run/      freeze-at-transition
   wd_ablation/           WD 0.1 / 0.3 compact isolation
 INDEX.md                 human index of kits, runs, claims
-MANIFEST.tsv             sha256 + size of every local artifact file (1057 files)
+MANIFEST.tsv             (not committed) sha256 + size of every local artifact file (1057 files)
 ```
 
 ## What is not in git

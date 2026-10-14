@@ -1,6 +1,6 @@
 # Headlines from local runs (2026-08-16)
 
-Source files in the working store; compact copies live next to this file when uploaded.
+> **Errata (2026-10-14):** ~~Source files in the working store; compact copies live next to this file when uploaded.~~ None of the source files are in this repository: this file is the only one in `results/`, and the training script `worker.py` is also missing. Every number below is unverified from the repo. See [`../ERRATA.md`](../ERRATA.md).
 
 ## streams_run16 — isolation / rescue
 

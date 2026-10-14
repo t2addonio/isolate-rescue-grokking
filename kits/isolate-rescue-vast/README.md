@@ -1,6 +1,6 @@
 # Isolation + Rescue + Phase Timing + Freeze-at-Transition — Vast.ai 4090 kit
 
-16 seeds by default (2 waves on 8×4090). Each seed:
+16 seeds by default (the 16-seed results can't be verified until `worker.py` is committed; see `../../ERRATA.md`) (2 waves on 8×4090). Each seed:
 
 1. **Trains** modular-addition grokking model with **snapshots every 500 steps**
 2. Extracts 8 residual directions (PCA + between-class)
