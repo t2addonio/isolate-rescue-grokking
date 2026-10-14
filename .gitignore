@@ -11,3 +11,5 @@ venv/
 logs/
 .grok/
 .tmp/
+__pycache__/
+.pytest_cache/

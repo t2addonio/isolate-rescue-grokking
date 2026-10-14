@@ -16,3 +16,7 @@ bash launch.sh grok --save_every 250 --wd 1.0 --n_contrastive 2
 ```
 
 `worker.py` is in the working store at `artifacts/joint-residual/worker.py`.
+
+## Seeds
+
+`launch.sh` runs seeds 0-15 by default (`--seed N`). `worker.py` must call `set_seed(args.seed, args.deterministic)` from `seeding.py` (symlink to `../seeding.py`). The kit pins are in `requirements.txt` and match the other kit and Stage 1.

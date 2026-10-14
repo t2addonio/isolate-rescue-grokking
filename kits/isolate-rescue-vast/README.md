@@ -23,3 +23,7 @@ bash launch.sh grok --save_every 250 --wd 3.0
 ```
 
 `worker.py` lives in the working store at `artifacts/isolate-rescue-vast/worker.py` until the next push of the 50 kB trainer (too large for a single content-API batch with the binaries).
+
+## Seeds
+
+`launch.sh` runs seeds 0-15 by default (`--seed N`). `worker.py` must call `set_seed(args.seed, args.deterministic)` from `seeding.py` (symlink to `../seeding.py`). The kit pins are in `requirements.txt` and match the other kit and Stage 1.

@@ -1,7 +1,11 @@
-torch>=2.2
-numpy>=1.24
-tqdm>=4.66
+# Exact pins, shared by both kits and matching Stage 1 (residual-stream-grokking).
+# For CUDA, install torch from the matching index first, e.g.:
+#   pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cu128
+torch==2.14.1
+numpy==2.5.4
+tqdm==4.70.1
 # gpt2 backend only (grok backend does not need these):
-transformers>=4.40
-# transformer-lens is optional; worker falls back to HF GPT-2 if missing
-# transformer-lens>=2.0
+transformers==5.19.0
+# transformer-lens is optional; worker falls back to HF GPT-2 if missing.
+# Stage 1 dependency: t2addonio/residual-stream-grokking is NOT pip-installable
+# (no pyproject.toml/setup.py). See README "Stage 1 dependency".
