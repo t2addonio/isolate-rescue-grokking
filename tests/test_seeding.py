@@ -22,3 +22,10 @@ def test_different_seed_differs():
 
 def test_seed_arg_default():
     assert add_seed_args(argparse.ArgumentParser()).parse_args([]).seed == 0
+
+def test_kit_copies_match_canonical():
+    kits = pathlib.Path(__file__).resolve().parents[1] / "kits"
+    canon = (kits / "seeding.py").read_bytes()
+    for k in ("isolate-rescue-vast", "joint-residual"):
+        p = kits / k / "seeding.py"
+        assert not p.is_symlink() and p.read_bytes() == canon, f"{p} out of sync with kits/seeding.py"

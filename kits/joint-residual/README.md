@@ -19,4 +19,4 @@ bash launch.sh grok --save_every 250 --wd 1.0 --n_contrastive 2
 
 ## Seeds
 
-`launch.sh` runs seeds 0-15 by default (`--seed N`). `worker.py` must call `set_seed(args.seed, args.deterministic)` from `seeding.py` (symlink to `../seeding.py`). The kit pins are in `requirements.txt` and match the other kit and Stage 1.
+`launch.sh` runs seeds 0-15 by default (`--seed N`). `worker.py` must call `set_seed(args.seed, args.deterministic)` from `seeding.py` (a copy of `../seeding.py`, kept identical by `tests/test_seeding.py`). The kit pins are in `requirements.txt` and match the other kit and Stage 1.
